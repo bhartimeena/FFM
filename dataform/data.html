@@ -1,0 +1,78 @@
+<!-- Using this we can see the data of the user which is submmitted -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Visitor Data</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile Number</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="visitorTableBody">
+                <!-- Data will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Retrieve data from localStorage
+        var visitors = JSON.parse(localStorage.getItem("visitors")) || [];
+        
+        // Get the table body element
+        var tableBody = document.getElementById("visitorTableBody");
+        
+        // Iterate through each visitor data and create table rows
+        visitors.forEach(function(visitor) {
+            var row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${visitor.name}</td>
+                <td>${visitor.email}</td>
+                <td>${visitor.mobile}</td>
+                <td>${visitor.message}</td>
+            `;
+            tableBody.appendChild(row);
+        });
+    </script>
+</body>
+</html>

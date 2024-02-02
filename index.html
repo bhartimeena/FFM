@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fieldforce Monitor - Sign Up</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="main">
+        <section class="title">
+        <div class="title" id="title">
+            <h1>Revolutionize Your Field Operations with Fieldforce Monitor</h1>
+        </div>
+        
+    </section>
+    <div class="btn">
+            <button class="toggle-btn" id="toggle-btn">Hide/Show</button>
+       </div>
+    </div>
+    <div id="scroll"></div>
+    
+   
+   <section class="content" id="content">
+      <h2> Welcome to the future of field force management! </h2>
+        <p>Introducing our cutting-edge Field Force Monitor App, 
+        your ultimate solution to elevate the productivity and efficiency of your team and organization.</p>
+        <h2>Key Features:</h2>
+        <div class="service-list">
+            <div class="list1">
+                <ul>
+                     <li>Smart Features for Smart Individuals</li>
+            <li>Effortless Time & Distance Calculation</li>
+            <li>Customer POIs for Efficient Client Management</li>
+            <li>Swift Trip to Expense Conversion</li>
+                </ul>
+            </div>
+            <div class="list2">
+                <ul>
+           
+            <li>Field Staff Trip Planning & Task Assignment</li>
+            <li>Real-time Performance Monitoring</li>
+            <li>Single Dashboard for Comprehensive Oversight</li>
+              </ul>
+            </div>
+       
+         </div>
+        <h2>Uses of the App:</h2>
+        <h3>The uses of our Field Force Monitor App are endless:</h3>
+        <div class="service-list">
+        <div class="list1">
+            <ul>
+                <li>Seamlessly manage your team's operations, eliminating manual processes and improving efficiency.</li>
+                <li>Access critical data in real-time, ensuring accurate and timely decision-making.</li>
+
+        </div>
+        <div class="list2">
+            <ul>
+                <li>Customize the app to suit your unique field activation needs, from dashboard preferences to reporting criteria.</li>
+            <li>Automate team monitoring with advanced geo-tracking and geo-fencing features, preventing fraudulent activities and ensuring accuracy.</li>
+        </ul>
+        </div>
+
+        </div>
+            
+        <h2>Why Choose Us:</h2>
+        <p class="last">Experience the ease and efficiency of managing your field force like never before. Enroll now and witness the transformation firsthand!</p>
+        <div class="footer">
+            <button onclick="openSignUpForm()" class="subcontainer">Want to learn More?</button>
+    </div>
+
+    </div>
+   </section>    
+
+        <div class="last-text">
+        
+            <p> Developed With &#10084; By Bharti Meena &copy; <script>document.write(new Date().getFullYear());</script> </p> 
+    </div>
+
+
+    <script>
+        function toggleContent() {
+            var content = document.getElementById("content");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+        function scrollToContent() {
+    var content = document.getElementById("content");
+    content.scrollIntoView({ behavior: 'smooth' }); // Smooth scroll to content
+}
+
+        // Add event listener to the button
+        document.getElementById("toggle-btn").addEventListener("click", toggleContent);
+        function openSignUpForm() {
+            window.open("./dataform/signupform.html", "_blank");
+        }
+    </script>
+
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
